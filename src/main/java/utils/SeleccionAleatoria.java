@@ -4,6 +4,8 @@ package utils;
  * Copyright 2023 SQA. Todos los derechos reservados.
  */
 
+import models.Empleado;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;

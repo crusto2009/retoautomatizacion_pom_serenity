@@ -6,6 +6,7 @@ import models.Empleado;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -25,10 +26,9 @@ public class EditarPedidoPageSteps {
         if(driver.findElement(editarpedidopage.getContenedorEmpleados()).isDisplayed()){
 
             List<WebElement> empleado =driver.findElements(editarpedidopage.getListaEmpleados());
-            empleado.get(1).click();
-            //Capturamos el nombre del empleado
-            System.out.println(empleado);
-            //Empleado.setNombreEmpleado(empleado.get(0).getText());
+            System.out.println("empleado seleccionado"+empleado.get(2).getText());
+            empleado.get(2).click();
+
         }
     }
 
@@ -43,7 +43,17 @@ public class EditarPedidoPageSteps {
     public void validarMensaje(){
         WebDriver driver = editarpedidopage.getDriver();
         driver.manage().timeouts().implicitlyWait(50L, TimeUnit.SECONDS);
-        Assert.assertTrue(editarpedidopage.getDriver().findElement(editarpedidopage.getTxtMensajeValidacion()).isDisplayed());
+
+        //Validamos el mensaje
+        Assert.assertTrue(driver.findElement(editarpedidopage.getTxtMensajeValidacion()).isDisplayed());
+        //Validamos que el nombre cambia
+        Assert.assertNotEquals(
+                driver.findElement(By.id("select2-chosen-9")).getText(),
+                Empleado.getNombreEmpleado()
+
+        );
+
+
     }
 
 
