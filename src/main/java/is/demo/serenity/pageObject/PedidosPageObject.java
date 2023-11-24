@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 
 public class PedidosPageObject extends PageObject {
 
-    /* //*[contains(@class,'slick-row')] */
-
     private By ordenesList = By.xpath("//div[contains(@class,'slick-cell l0 r0')]//a");
 
     public By getOrdenesList() {

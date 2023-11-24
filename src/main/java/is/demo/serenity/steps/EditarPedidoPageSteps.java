@@ -25,7 +25,7 @@ public class EditarPedidoPageSteps {
         if(driver.findElement(editarpedidopage.getContenedorEmpleados()).isDisplayed()){
 
             List<WebElement> empleado =driver.findElements(editarpedidopage.getListaEmpleados());
-            empleado.get(0).click();
+            empleado.get(1).click();
             //Capturamos el nombre del empleado
             System.out.println(empleado);
             //Empleado.setNombreEmpleado(empleado.get(0).getText());

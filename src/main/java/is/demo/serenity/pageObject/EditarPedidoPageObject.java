@@ -5,14 +5,6 @@ import org.openqa.selenium.By;
 
 public class EditarPedidoPageObject extends PageObject {
 
-    //*[@id="select2-results-30"]//li
-
-    //*[@id="select2-drop"] -> validar este si esta visible
-
-    //*[text()=' Guardar']
-
-    //*[@class = 'fa fa-clipboard-check text-purple']
-
     private By empleadoSelect= By.xpath("//*[@id='s2id_Serenity_Demo_Northwind_OrderDialog15_EmployeeID']//a");
 
     private By elementoEmpleado= By.xpath("//*[@id='select2-drop']");
