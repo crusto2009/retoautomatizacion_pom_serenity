@@ -1,7 +1,7 @@
 #language:es
 
   Característica: Inicio de sesión exitoso:
-    Yo como usuario quiero iniciar sesion en serenity.is
+    Yo como usuario quiero iniciar sesion en la pagina web
 
   Escenario:Inicio de sesión exitoso
     Dado que es usuario abre el navegador
