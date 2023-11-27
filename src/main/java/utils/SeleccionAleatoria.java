@@ -21,4 +21,10 @@ public class SeleccionAleatoria {
         int indice= random.nextInt(productos.size());
         return productos.get(indice);
     }
+
+    public static WebElement seleccionEmpleado(List<WebElement> empelados){
+        Random random= new Random();
+        int indice= random.nextInt(empelados.size());
+        return empelados.get(indice);
+    }
 }

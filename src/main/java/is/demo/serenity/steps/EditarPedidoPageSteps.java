@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utils.SeleccionAleatoria;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -24,11 +25,10 @@ public class EditarPedidoPageSteps {
         driver.manage().timeouts().implicitlyWait(50L, TimeUnit.SECONDS);
         driver.findElement(editarpedidopage.getEmpleadoSelect()).click();
         if(driver.findElement(editarpedidopage.getContenedorEmpleados()).isDisplayed()){
-
-            List<WebElement> empleado =driver.findElements(editarpedidopage.getListaEmpleados());
-            System.out.println("empleado seleccionado"+empleado.get(2).getText());
-            empleado.get(2).click();
-
+            List<WebElement> empleados =driver.findElements(editarpedidopage.getListaEmpleados());
+            WebElement empleado = SeleccionAleatoria.seleccionEmpleado(empleados);
+            System.out.println("empleado seleccionado"+empleado.getText());
+            empleado.click();
         }
     }
 
@@ -46,11 +46,12 @@ public class EditarPedidoPageSteps {
 
         //Validamos el mensaje
         Assert.assertTrue(driver.findElement(editarpedidopage.getTxtMensajeValidacion()).isDisplayed());
+
+
         //Validamos que el nombre cambia
         Assert.assertNotEquals(
                 driver.findElement(By.id("select2-chosen-9")).getText(),
                 Empleado.getNombreEmpleado()
-
         );
 
 

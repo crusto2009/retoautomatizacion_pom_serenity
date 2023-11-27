@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Cambio de nombre del empleado" skipped="0" tests="1" time="21.88" timestamp="2023-11-27 02:38:58"><testcase name="Cambiar el nombre empleado en cualquiera  orden de compra de manera exitosa"/></testsuite>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Cambio de nombre del empleado" skipped="0" tests="1" time="19.29" timestamp="2023-11-27 11:40:49"><testcase name="Cambiar el nombre empleado en cualquiera  orden de compra de manera exitosa"/></testsuite>
+>>>>>>> Stashed changes

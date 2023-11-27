@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 Serenity report generated 27-11-2023 14:39:22
+=======
+Serenity report generated 27-11-2023 11:41:10
+>>>>>>> Stashed changes
 
 Test Cases:         2 
 Passed:             2

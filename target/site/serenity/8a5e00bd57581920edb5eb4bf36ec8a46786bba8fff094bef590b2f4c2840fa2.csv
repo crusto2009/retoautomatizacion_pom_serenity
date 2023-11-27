@@ -1,2 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
+<<<<<<< Updated upstream
 "Cambio de nombre del empleado","Cambiar el nombre empleado en cualquiera  orden de compra de manera exitosa","SUCCESS","2023-11-27T14:38:58.6310485-05:00[America/Bogota]","0.0","21.88"
+=======
+"Cambio de nombre del empleado","Cambiar el nombre empleado en cualquiera  orden de compra de manera exitosa","SUCCESS","2023-11-27T11:40:49.0757267-05:00[America/Bogota]","0.0","19.29"
+>>>>>>> Stashed changes
