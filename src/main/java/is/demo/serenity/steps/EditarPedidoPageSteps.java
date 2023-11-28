@@ -50,7 +50,7 @@ public class EditarPedidoPageSteps {
 
         //Validamos que el nombre cambia
         Assert.assertNotEquals(
-                driver.findElement(By.id("select2-chosen-9")).getText(),
+                driver.findElement(editarpedidopage.getTxtNombreEmpleadoActual()).getText(),
                 Empleado.getNombreEmpleado()
         );
 

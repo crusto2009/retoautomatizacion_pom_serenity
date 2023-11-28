@@ -17,6 +17,8 @@ public class EditarPedidoPageObject extends PageObject {
 
     private By txtMensajeValidacion = By.id("toast-container");
 
+    private By txtNombreEmpleadoActual = By.id("select2-chosen-9");
+
     private By listaEmpleados = By.xpath("//*[contains(@id,'select2-results')]//li");
 
     public By getEmpleadoSelect() {
@@ -47,5 +49,7 @@ public class EditarPedidoPageObject extends PageObject {
         return contenedorEmpleados;
     }
 
-
+    public By getTxtNombreEmpleadoActual() {
+        return txtNombreEmpleadoActual;
+    }
 }

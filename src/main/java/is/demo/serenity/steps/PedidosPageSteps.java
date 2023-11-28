@@ -20,7 +20,7 @@ public class PedidosPageSteps {
         List<WebElement> pedidos = pagepedidos.getDriver().findElements(pagepedidos.getOrdenesLista());
 
         WebElement producto = SeleccionAleatoria.seleccionProducto(pedidos);
-        Empleado.setNombreEmpleado(producto.findElement(By.xpath("//div[contains(@class,'slick-cell l4 r4')]")).getText());
+        Empleado.setNombreEmpleado(producto.findElement(pagepedidos.getNombreEmpleadoEnPedido()).getText());
         producto.click();
 
     }
