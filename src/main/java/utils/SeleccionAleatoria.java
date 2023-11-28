@@ -16,15 +16,10 @@ import java.util.Random;
  */
 public class SeleccionAleatoria {
 
-    public static WebElement seleccionProducto(List<WebElement> productos){
+    public static WebElement seleccionRamdom(List<WebElement> elements){
         Random random= new Random();
-        int indice= random.nextInt(productos.size());
-        return productos.get(indice);
+        int indice= random.nextInt(elements.size());
+        return elements.get(indice);
     }
 
-    public static WebElement seleccionEmpleado(List<WebElement> empelados){
-        Random random= new Random();
-        int indice= random.nextInt(empelados.size());
-        return empelados.get(indice);
-    }
 }

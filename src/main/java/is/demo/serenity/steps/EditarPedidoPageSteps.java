@@ -26,7 +26,7 @@ public class EditarPedidoPageSteps {
         driver.findElement(editarpedidopage.getEmpleadoSelect()).click();
         if(driver.findElement(editarpedidopage.getContenedorEmpleados()).isDisplayed()){
             List<WebElement> empleados =driver.findElements(editarpedidopage.getListaEmpleados());
-            WebElement empleado = SeleccionAleatoria.seleccionEmpleado(empleados);
+            WebElement empleado = SeleccionAleatoria.seleccionRamdom(empleados);
             System.out.println("empleado seleccionado"+empleado.getText());
             empleado.click();
         }

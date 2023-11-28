@@ -19,7 +19,7 @@ public class PedidosPageSteps {
     public void listarPedidos(){
         List<WebElement> pedidos = pagepedidos.getDriver().findElements(pagepedidos.getOrdenesLista());
 
-        WebElement producto = SeleccionAleatoria.seleccionProducto(pedidos);
+        WebElement producto = SeleccionAleatoria.seleccionRamdom(pedidos);
         Empleado.setNombreEmpleado(producto.findElement(pagepedidos.getNombreEmpleadoEnPedido()).getText());
         producto.click();
 
