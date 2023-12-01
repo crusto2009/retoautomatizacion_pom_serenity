@@ -4,6 +4,8 @@ package utils;
  * Copyright 2023 SQA. Todos los derechos reservados.
  */
 
+import models.Empleado;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -14,9 +16,10 @@ import java.util.Random;
  */
 public class SeleccionAleatoria {
 
-    public static WebElement seleccionProducto(List<WebElement> productos){
+    public static WebElement seleccionRamdom(List<WebElement> elements){
         Random random= new Random();
-        int indice= random.nextInt(productos.size());
-        return productos.get(indice);
+        int indice= random.nextInt(elements.size());
+        return elements.get(indice);
     }
+
 }

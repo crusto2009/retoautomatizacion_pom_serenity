@@ -1,8 +1,10 @@
 package is.demo.serenity.steps;
 
 import is.demo.serenity.pageObject.PedidosPageObject;
+import models.Empleado;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.SeleccionAleatoria;
 
@@ -15,8 +17,10 @@ public class PedidosPageSteps {
 
     @Step
     public void listarPedidos(){
-        List<WebElement> pedidos = pagepedidos.getDriver().findElements(pagepedidos.getOrdenesList());
-        WebElement producto = SeleccionAleatoria.seleccionProducto(pedidos);
+        List<WebElement> pedidos = pagepedidos.getDriver().findElements(pagepedidos.getOrdenesLista());
+
+        WebElement producto = SeleccionAleatoria.seleccionRamdom(pedidos);
+        Empleado.setNombreEmpleado(producto.findElement(pagepedidos.getNombreEmpleadoEnPedido()).getText());
         producto.click();
 
     }
